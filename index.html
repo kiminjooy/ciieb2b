@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>第九届进博会韩国馆采购对接活动</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+    color: #1f2d3d;
+    background: #f4f8ff;
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, #0046a3 0%, #0b75d1 55%, #5bbcff 100%);
+    color: white;
+    padding: 28px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 26px;
+    font-size: 15px;
+  }
+
+  .hero {
+    min-height: 480px;
+    background:
+      linear-gradient(rgba(0, 50, 130, 0.72), rgba(0, 85, 170, 0.68)),
+      url("https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=1800&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 85px 8% 50px;
+    position: relative;
+  }
+
+  .hero-content {
+    max-width: 1100px;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 1.25;
+    margin-bottom: 24px;
+    font-weight: 800;
+  }
+
+  .subtitle {
+    font-size: 23px;
+    margin-bottom: 36px;
+    color: #eaf5ff;
+  }
+
+  .hero-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .info-box {
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.32);
+    padding: 16px 22px;
+    border-radius: 14px;
+    min-width: 190px;
+  }
+
+  .info-box strong {
+    display: block;
+    font-size: 14px;
+    color: #cfe9ff;
+  }
+
+  .info-box span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .cta {
+    display: inline-block;
+    background: white;
+    color: #0056b8;
+    padding: 15px 34px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  }
+  
+
+  section {
+    padding: 80px 8%;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 46px;
+  }
+
+  .section-title span {
+    color: #006bd6;
+    font-weight: 700;
+  }
+
+  .section-title h2 {
+    font-size: 34px;
+    margin-top: 8px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .card {
+    background: white;
+    padding: 34px 26px;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(0, 65, 150, 0.08);
+    border-top: 4px solid #0b75d1;
+  }
+
+  .card .icon {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #003f8f;
+  }
+
+  .blue-section {
+    background: linear-gradient(135deg, #eaf5ff, #ffffff);
+  }
+
+  .program {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    align-items: center;
+  }
+
+  .program-box {
+    background: white;
+    padding: 38px;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(0, 65, 150, 0.08);
+  }
+
+  .program-box ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  .program-box li {
+    padding: 12px 0;
+    border-bottom: 1px solid #edf2f7;
+  }
+
+  .program-box li::before {
+    content: "✓";
+    color: #0077d9;
+    font-weight: 800;
+    margin-right: 10px;
+  }
+
+  .schedule {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 65, 150, 0.08);
+  }
+
+  .schedule-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    border-bottom: 1px solid #e8eef7;
+  }
+
+  .schedule-row:last-child {
+    border-bottom: none;
+  }
+
+  .time {
+    background: #006bd6;
+    color: white;
+    padding: 22px;
+    font-weight: 700;
+  }
+
+  .content {
+    padding: 22px;
+  }
+
+  .apply {
+    text-align: center;
+    background: linear-gradient(135deg, #0046a3, #0785e8);
+    color: white;
+  }
+
+  .apply h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+
+  .apply p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  footer {
+    background: #052b5f;
+    color: #cfe0f5;
+    padding: 36px 8%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .form-box {
+  max-width: 980px;
+  margin: 0 auto;
+  background: white;
+  padding: 18px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 65, 150, 0.08);
+  }
+
+  .page-section {
+    min-height: 720px;
+  }
+
+  .quick-links{
+  padding:70px 8%;
+  background:#ffffff;
+  }
+
+  .quick-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  }
+
+  .quick-card{
+  background:white;
+  border-radius:24px;
+  padding:40px 30px;
+  text-align:center;
+  cursor:pointer;
+  transition:all .25s ease;
+  box-shadow:0 12px 35px rgba(0,65,150,.08);
+  }
+
+  .quick-card:hover{
+  transform:translateY(-5px);
+  }
+
+  .quick-icon{
+  font-size:42px;
+  margin-bottom:16px;
+  }
+
+  .quick-card h3{
+  color:#0046a3;
+  margin-bottom:10px;
+  }
+
+  .quick-card p{
+  color:#6b7280;
+  }
+
+  .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  }
+
+  .contact-card {
+  background: white;
+  border: 1px solid #dce8f5;
+  border-radius: 22px;
+  padding: 26px 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  box-shadow: 0 12px 35px rgba(0, 65, 150, 0.06);
+  }
+
+  .contact-card h3 {
+  font-size: 22px;
+  color: #003f8f;
+  margin-bottom: 10px;
+  }
+
+  .contact-card p {
+  color: #536579;
+  margin-bottom: 4px;
+  }
+
+  .contact-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #e5eef7;
+  }
+
+  .contact-desc{
+  text-align:center;
+  color:#5b6b7a;
+  margin-bottom:36px;
+  }
+
+  .contact-grid {
+  margin-top: 0;
+  }
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    align-items: flex-start;
+  }
+}
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 36px;
+    }
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+    .program {
+      grid-template-columns: 1fr;
+    }
+    .schedule-row {
+      grid-template-columns: 1fr;
+    }
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-links a {
+      margin-left: 0;
+      font-size: 14px;
+      background: rgba(255,255,255,0.14);
+      padding: 7px 12px;
+      border-radius: 999px;
+    }
+    .contact-card {
+    align-items: center;
+    }
+    .contact-card img{
+    width:100px;
+    height:100px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+    .hero {
+      padding-top: 80px;
+    }
+    .hero-info {
+      flex-direction: column;
+    }
+    .info-box {
+      width: 100%;
+    }
+    .quick-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">KOREA PAVILION · CIIE 2026</div>
+    <div class="nav-links">
+      <a href="#home" onclick="showPage('home')">首页</a>
+      <a href="#about" onclick="showPage('home')">活动介绍</a>
+      <a href="#benefits" onclick="showPage('home')">活动亮点</a>
+      <a href="#program" onclick="showPage('home')">活动安排</a>
+      <a href="#register" onclick="showPage('register')">报名参加</a>
+      <a href="#companies" onclick="showPage('companies')">韩国企业清单</a>
+      <a href="#consult" onclick="showPage('consult')">联系我们</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="tag">第九届中国国际进口博览会 · 韩国馆采购商邀请计划</div>
+
+    <h1>韩国馆采购对接活动</h1>
+
+    <p class="subtitle">
+      对接韩国优质企业，共享合作发展新机遇
+    </p>
+
+    <div class="hero-info">
+      <div class="info-box">
+        <strong>活动时间</strong>
+        <span>2026年11月6日-10日（暂定）</span>
+      </div>
+      <div class="info-box">
+        <strong>活动地点</strong>
+        <span>上海 · 国家会展中心</span>
+      </div>
+      <div class="info-box">
+        <strong>参与对象</strong>
+        <span>中国采购商、进口商、经销商、电商平台及渠道运营商</span>
+      </div>
+      <div class="info-box">
+        <strong>中国国际进口博览会（CIIE）</strong>
+        <a href="https://www.ciie.org/zbh/index.html"
+           target="_blank"
+           style="
+              color:white;
+              font-size:18px;
+              font-weight:700;
+              text-decoration:none;
+           ">
+           了解进博会详情
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <span>ABOUT THE PROGRAM</span>
+    <h2>活动介绍</h2>
+  </div>
+
+  <div class="program">
+    <div class="program-box">
+      <h3>韩国馆采购商专场对接</h3>
+      <p>
+        韩国国际贸易协会（KITA）将于第九届中国国际进口博览会期间组织韩国优质企业参展，并举办韩国馆供采对接洽谈活动。
+      </p>
+      <br />
+      <p>
+        本次活动将邀请中国采购商与韩国优质消费品企业与开展一对一商务洽谈，帮助采购商高效了解韩国新品、优质品牌及供应链资源，促进中韩企业建立长期合作关系。
+      </p>
+    </div>
+
+    <div class="program-box">
+      <h3>推荐采购领域</h3>
+      <ul>
+        <li>美妆个护及健康消费品</li>
+        <li>食品及生活消费品</li>
+        <li>时尚及文创产品</li>
+        <li>其他韩国优质创新产品</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="benefits" class="blue-section">
+  <div class="section-title">
+    <span>WHY JOIN US</span>
+    <h2>活动亮点</h2>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🇰🇷</div>
+      <h3>韩国优质企业集中参会</h3>
+      <p>汇聚韩国优质品牌及出口企业，提供丰富的产品与合作资源。</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>一对一商务洽谈</h3>
+      <p>根据采购需求提前匹配企业，提高商务洽谈效率。
+</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌐</div>
+      <h3>现场翻译支持</h3>
+      <p>活动现场提供必要的翻译协助，帮助双方顺利开展商务交流。</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📌</div>
+      <h3>补贴支持</h3>
+      <p>符合活动要求的受邀采购商可获得考通或者住宿补贴。</p>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="section-title">
+    <span>PROGRAM</span>
+    <h2>活动安排</h2>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-row">
+      <div class="time">Step 01</div>
+      <div class="content">
+        <h3>报名参加韩国馆供采对接洽谈会</h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="schedule-row">
+      <div class="time">Step 02</div>
+      <div class="content">
+        <h3>完成中国国际进口博览会观众注册</h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="schedule-row">
+      <div class="time">Step 03</div>
+      <div class="content">
+        <h3>提交企业信息及采购需求</h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="schedule-row">
+      <div class="time">Step 04</div>
+      <div class="content">
+        <h3>根据采购需求安排韩国企业对接</h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="schedule-row">
+      <div class="time">Step 05</div>
+      <div class="content">
+        <h3>进博会期间赴韩国馆参加一对一商务洽谈</h3>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apply" class="apply">
+  <h2>报名咨询</h2>
+  <p>
+    如您希望获取韩国企业名录或预约商务洽谈，欢迎联系活动工作人员。
+  </p>
+
+  <a href="#consult" onclick="showPage('consult')" class="cta">联系主办方</a>
+</section>
+
+<section id="consult-page" class="page-section blue-section" style="display:none;">
+  <div class="section-title">
+    <span>CONTACT</span>
+    <h2>联系我们</h2>
+  </div>
+
+  <p class="contact-desc">
+  如需咨询活动相关事宜，请联系以下工作人员。
+  </p>
+
+  <div class="contact-grid">
+
+  <div class="contact-card">
+    <div class="contact-text">
+      <h3>河龙 先生</h3>
+      <p>韩国贸易协会（KITA）</p>
+      <p>国际采购商对接服务中心</p>
+      <br>
+      <p><strong>邮箱：</strong>hl5752874@kita.net</p>
+      <p><strong>微信：</strong>5752874（MC）</p>
+    </div>
+    <img src="images/qr-hl.jpg" alt="河龙 微信二维码">
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-text">
+      <h3>金玟周 小姐</h3>
+      <p>韩国贸易协会（KITA）</p>
+      <p>国际采购商对接服务中心</p>
+      <br>
+      <p><strong>邮箱：</strong>kiminjooy@kita.net</p>
+      <p><strong>微信：</strong>821036245307（金玟周）</p>
+    </div>
+    <img src="images/qr-mj.png" alt="金玟周 微信二维码">
+  </div>
+
+</div>
+</section>
+
+<section id="register-page" class="page-section blue-section" style="display:none;">
+  <div class="section-title">
+    <span>REGISTRATION</span>
+    <h2>报名参加</h2>
+  </div>
+
+  <div class="form-box">
+    <iframe 
+      src="https://forms.office.com/r/pjzdzp3Hkm"
+      width="100%" 
+      height="850" 
+      frameborder="0"
+      style="border:none; border-radius:18px; background:white;"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <p style="text-align:center; margin-top:18px;">
+    <a href="https://forms.office.com/r/pjzdzp3Hkm" target="_blank" class="cta">
+      如无法显示表单，请点击此处填写
+    </a>
+  </p>
+  
+</section>
+
+<section id="companies-page" class="page-section blue-section" style="display:none;">
+  <div class="section-title">
+    <span>KOREAN COMPANIES</span>
+    <h2>韩国企业清单</h2>
+  </div>
+
+  <div class="form-box">
+    <iframe
+    src="company-list.html"
+    width="100%"
+    height="1200"
+    frameborder="0"
+    style="border:none; border-radius:18px; background:white;">
+    </iframe>
+  </div>
+</section>
+
+<section class="quick-links">
+ 
+  <div class="section-title">
+    <span>QUICK ACCESS</span>
+    <h2>快速入口</h2>
+  </div>
+
+  <div class="quick-grid">
+
+    <div class="quick-card"
+         onclick="showPage('register')">
+      <div class="quick-icon">📝</div>
+      <h3>报名参加</h3>
+      <p>填写报名表并提交采购需求</p>
+    </div>
+
+    <div class="quick-card"
+         onclick="showPage('companies')">
+      <div class="quick-icon">🇰🇷</div>
+      <h3>韩国企业清单</h3>
+      <p>查看韩国参展企业信息</p>
+    </div>
+
+    <div class="quick-card"
+         onclick="showPage('consult')">
+      <div class="quick-icon">📞</div>
+      <h3>联系我们</h3>
+      <p>获取活动咨询与支持</p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>主办单位：韩国贸易协会（KITA）</p>
+  <p>※ 홈페이지 링크랑 로고 넣을 예정</p>
+</footer>
+
+<script>
+  function showPage(page) {
+    const mainSections = document.querySelectorAll(
+      '.hero, .quick-links, #about, #benefits, #program, #apply'
+    );
+    const pageSections = document.querySelectorAll('.page-section');
+
+    if (page === 'home') {
+      mainSections.forEach(section => section.style.display = '');
+      pageSections.forEach(section => section.style.display = 'none');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    mainSections.forEach(section => section.style.display = 'none');
+    pageSections.forEach(section => section.style.display = 'none');
+
+    document.getElementById(page + '-page').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
