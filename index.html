@@ -60,7 +60,7 @@
   }
 
   .hero-content {
-    max-width: 1100px;
+    max-width: 1300px;
   }
 
   .tag {
@@ -87,18 +87,19 @@
   }
 
   .hero-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 36px;
+    gap: 16px;
   }
 
   .info-box {
+    flex: 1 1 220px;
+    min-width: 0;
     background: rgba(255,255,255,0.16);
     border: 1px solid rgba(255,255,255,0.32);
     padding: 16px 22px;
     border-radius: 14px;
-    min-width: 190px;
   }
 
   .info-box strong {
@@ -250,21 +251,100 @@
   }
 
   footer {
-    background: #052b5f;
-    color: #cfe0f5;
-    padding: 36px 8%;
-    text-align: center;
-    font-size: 14px;
+  background: #052b5f;
+  padding: 42px 8%;
+  text-align: center;
+}
+
+.footer-brand {
+  display: inline-block;
+}
+
+.footer-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 20px 28px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.07);
+  color: white;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.footer-brand-link:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.32);
+}
+
+.footer-kita-logo {
+  width: 145px;
+  height: auto;
+  display: block;
+  padding-right: 22px;
+  border-right: 1px solid rgba(255,255,255,0.18);
+}
+
+.footer-brand-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.footer-brand-text strong {
+  font-size: 17px;
+  color: white;
+}
+
+.footer-brand-text span {
+  font-size: 13px;
+  color: #cfe0f5;
+}
+
+.footer-brand-text small {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #7fc7ff;
+}
+
+@media (max-width: 600px) {
+  .footer-brand-link {
+    flex-direction: column;
+    gap: 14px;
   }
 
-  .form-box {
-  max-width: 980px;
-  margin: 0 auto;
-  background: white;
-  padding: 18px;
-  border-radius: 24px;
-  box-shadow: 0 12px 35px rgba(0, 65, 150, 0.08);
+  .footer-kita-logo {
+    padding-right: 0;
+    padding-bottom: 14px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
   }
+
+  .footer-brand-text {
+    text-align: center;
+  }
+ }
+
+  .form-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 65, 150, 0.08);
+}
+
+.form-box iframe {
+  width: 100%;
+  min-height: 900px;
+  border: none;
+  display: block;
+}
 
   .page-section {
     min-height: 720px;
@@ -358,6 +438,11 @@
   margin-top: 0;
   }
 
+  .footer-kita-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  }
+
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -366,9 +451,16 @@
   .contact-card {
     align-items: flex-start;
   }
+
+  .hero-info {
+   grid-template-columns: repeat(2, 1fr);
+  }
 }
 
   @media (max-width: 900px) {
+    .hero-info {
+      grid-template-columns: 1fr;
+    }
     h1 {
       font-size: 36px;
     }
@@ -424,6 +516,38 @@
       grid-template-columns: 1fr;
     }
   }
+
+
+
+.coming-soon {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 60px 40px;
+    text-align: center;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 65, 150, 0.08);
+}
+
+.coming-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.coming-soon h3 {
+    font-size: 36px;
+    color: #004ea2;
+    margin-bottom: 18px;
+}
+
+.coming-soon p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+}
+
+
+
 </style>
 </head>
 
@@ -457,7 +581,7 @@
     <div class="hero-info">
       <div class="info-box">
         <strong>活动时间</strong>
-        <span>2026年11月6日-8日</span>
+        <span>2026年11月6日-10日（暂定）</span>
       </div>
       <div class="info-box">
         <strong>活动地点</strong>
@@ -494,9 +618,9 @@
     <div class="program-box">
       <h3>韩国馆采购商专场对接</h3>
       <p>
-        韩国国际贸易协会（KITA）将于第九届中国国际进口博览会期间组织韩国优质企业参展，并举办韩国馆供采对接洽谈活动。
+        <br> 韩国国际贸易协会（KITA）将于第九届中国国际进口博览会期间组织韩国优质企业参展，并举办韩国馆供采对接洽谈活动。
       </p>
-      <br />
+      <br/>
       <p>
         本次活动将邀请中国采购商与韩国优质消费品企业与开展一对一商务洽谈，帮助采购商高效了解韩国新品、优质品牌及供应链资源，促进中韩企业建立长期合作关系。
       </p>
@@ -543,7 +667,7 @@
     <div class="card">
       <div class="icon">📌</div>
       <h3>补贴支持</h3>
-      <p>符合活动要求的受邀采购商可获得考通或者住宿补贴。</p>
+      <p>符合活动要求的受邀采购商可获得交通补贴。</p>
     </div>
   </div>
 </section>
@@ -597,15 +721,6 @@
   </div>
 </section>
 
-<section id="apply" class="apply">
-  <h2>报名咨询</h2>
-  <p>
-    如您希望获取韩国企业名录或预约商务洽谈，欢迎联系活动工作人员。
-  </p>
-
-  <a href="#consult" onclick="showPage('consult')" class="cta">联系主办方</a>
-</section>
-
 <section id="consult-page" class="page-section blue-section" style="display:none;">
   <div class="section-title">
     <span>CONTACT</span>
@@ -620,7 +735,7 @@
 
   <div class="contact-card">
     <div class="contact-text">
-      <h3>河龙 先生</h3>
+      <h3>河龙</h3>
       <p>韩国贸易协会（KITA）</p>
       <p>国际采购商对接服务中心</p>
       <br>
@@ -632,7 +747,7 @@
 
   <div class="contact-card">
     <div class="contact-text">
-      <h3>金玟周 小姐</h3>
+      <h3>金玟周</h3>
       <p>韩国贸易协会（KITA）</p>
       <p>国际采购商对接服务中心</p>
       <br>
@@ -641,6 +756,18 @@
     </div>
     <img src="images/qr-mj.png" alt="金玟周 微信二维码">
   </div>
+
+
+   <div class="contact-card">
+    <div class="contact-text">
+      <h3>吴殊玟</h3>
+      <p>韩国贸易协会（KITA）</p>
+      <p>国际采购商对接服务中心</p>
+      <br>
+      <p><strong>邮箱：</strong>jasmine84@kita.net</p>
+      <p><strong>微信：</strong>yamuni98</p>
+    </div>
+    <img src="images/qr-sm.jpg" alt="吴殊玟 微信二维码">
 
 </div>
 </section>
@@ -652,18 +779,24 @@
   </div>
 
   <div class="form-box">
-    <iframe 
-      src="https://forms.cloud.microsoft/r/9sdaZyzn0H"
-      width="100%" 
-      height="850" 
-      frameborder="0"
-      style="border:none; border-radius:18px; background:white;"
-      allowfullscreen>
-    </iframe>
+  <iframe
+    src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAADmwmoJUOEEyRVhROTNTR0VXVDhWMURaVzBCWUFRUC4u&embed=true"
+    width="100%"
+    height="1100"
+    frameborder="0"
+    marginwidth="0"
+    marginheight="0"
+    loading="eager"
+    style="border:none; display:block;"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen
+    msallowfullscreen>
+  </iframe>
   </div>
 
   <p style="text-align:center; margin-top:18px;">
-    <a href="https://forms.cloud.microsoft/r/9sdaZyzn0H" target="_blank" class="cta">
+    <a href="https://forms.office.com/r/pjzdzp3Hkm" target="_blank" class="cta">
       如无法显示表单，请点击此处填写
     </a>
   </p>
@@ -676,15 +809,22 @@
     <h2>韩国企业清单</h2>
   </div>
 
-  <div class="form-box">
+    <div class="coming-soon">
+    <div class="coming-icon">🔒</div>
+    <h3>即将公开</h3>
+    <p>预计将于 <strong>2026年8月</strong> 开放，敬请期待。</p>
+  </div>
+  
+
+<!-- <div class="form-box">
     <iframe
-    src="company-list.html"
+    src=""
     width="100%"
     height="1200"
     frameborder="0"
     style="border:none; border-radius:18px; background:white;">
     </iframe>
-  </div>
+  </div>-->
 </section>
 
 <section class="quick-links">
@@ -699,22 +839,19 @@
     <div class="quick-card"
          onclick="showPage('register')">
       <div class="quick-icon">📝</div>
-      <h3>报名参加</h3>
-      <p>填写报名表并提交采购需求</p>
+      <h3><br>报名参加</h3>
     </div>
 
     <div class="quick-card"
          onclick="showPage('companies')">
       <div class="quick-icon">🇰🇷</div>
-      <h3>韩国企业清单</h3>
-      <p>查看韩国参展企业信息</p>
+      <h3><br>韩国企业清单</h3>
     </div>
 
     <div class="quick-card"
          onclick="showPage('consult')">
       <div class="quick-icon">📞</div>
-      <h3>联系我们</h3>
-      <p>获取活动咨询与支持</p>
+      <h3><br>联系我们</h3>
     </div>
 
   </div>
@@ -722,8 +859,21 @@
 </section>
 
 <footer>
-  <p>主办单位：韩国贸易协会（KITA）</p>
-  <p>※ 홈페이지 링크랑 로고 넣을 예정</p>
+  <div class="footer-brand">
+    <a href="https://kita.org/" target="_blank" class="footer-brand-link">
+      <img
+        src="https://kita.org/imgs/common/logo-kita-org.svg"
+        alt="KITA Logo"
+        class="footer-kita-logo"
+      >
+
+      <div class="footer-brand-text">
+        <strong>韩国贸易协会</strong>
+        <span>Korea International Trade Association</span>
+        <small>kita.org ↗</small>
+      </div>
+    </a>
+  </div>
 </footer>
 
 <script>
